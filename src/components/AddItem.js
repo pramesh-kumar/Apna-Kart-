@@ -19,6 +19,12 @@ class AddItem extends React.Component {
         // console.log(this.props);
 
         e.preventDefault();
+
+        if(this.state.productName===""){
+          alert("Fill Items Details")
+          return ;
+        } 
+
         this.props.addItem(this.state.productName,Number(this.state.productPrice));
         }} >
 
